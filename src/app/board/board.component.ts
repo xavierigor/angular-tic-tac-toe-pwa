@@ -32,6 +32,8 @@ export class BoardComponent implements OnInit {
       this.squares.splice(index, 1, this.player);
       this.xIsNext = !this.xIsNext;
     }
+
+    this.winner = this.calculateWinner()
   }
 
   // algorithm to tell if a player won
